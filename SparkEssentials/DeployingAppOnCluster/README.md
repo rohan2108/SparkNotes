@@ -24,6 +24,7 @@
 - the cluster manager is responsible for Spark processes
 
 ![img.png](img.png)
+
 #### Client
 - the Spark driver is on the client machine
 - the client is responsible for the Spark processes and state management
