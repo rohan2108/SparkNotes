@@ -8,12 +8,12 @@
 
 ![img.png](img.png)
 
-Spark counts the number of stages since the start of the application
+Spark counts the number of stages since the start of the application. That is why we see so many job IDs
 ```
 rdd1.repartition (23).count
 ```
 It creates the two stages:
-- one is to read the rdd1 which has 6 partitions\
+- one is to read the rdd1 which has 6 partitions
 - 2nd is partitioning the rdd in 23 partition and take the count of each partition
 That is why it has 29 tasks to do
 ![img_1.png](img_1.png)
@@ -22,10 +22,11 @@ That is why it has 29 tasks to do
 |--------------------------|:--------------------------------:|
 | ![img_2.png](img_2.png)  |     ![img_3.png](img_3.png)      |
 
-Whwnever you are working with high level API with dataframes or datasets, we dont have too much control what steps 
+Whenever you are working with high level API with dataframes or datasets, we dont have too much control what steps 
 spark will create whenever it computes
 
 ![img_4.png](img_4.png)
+
 It is called a **physical plan**, it describes all the operations that spark will do to actually compute this dataset
 
 ![img_5.png](img_5.png)
