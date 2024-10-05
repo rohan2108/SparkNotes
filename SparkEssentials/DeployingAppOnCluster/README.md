@@ -22,6 +22,7 @@
 #### Cluster
 - the Spark driver is launched on a worker node
 - the cluster manager is responsible for Spark processes
+
 ![img.png](img.png)
 #### Client
 - the Spark driver is on the client machine
@@ -30,6 +31,7 @@
 in client mode, then we need the client machine on which we need to run the command.
 So the client machine will actually talk to the cluster manager and after that, it will spawn the spark driver on the client machine
 not the actual cluster and then the spark manager actually take care to spin the spark executors on the worker nodes.
+
 ![img_1.png](img_1.png)
 
 #### local
